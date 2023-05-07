@@ -1,13 +1,15 @@
 package com.example.chatapp.Adapter
 
+import android.content.Context
 import android.text.format.DateFormat
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.chatapp.UsersFragmentDirections
 import com.example.chatapp.databinding.UserRowLayoutBinding
+import com.example.chatapp.fragments.UsersFragmentDirections
 import io.getstream.chat.android.client.ChatClient
 import io.getstream.chat.android.client.models.User
 

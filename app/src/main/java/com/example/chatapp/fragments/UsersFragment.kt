@@ -1,4 +1,4 @@
-package com.example.chatapp
+package com.example.chatapp.fragments
 
 import android.os.Bundle
 import android.util.Log

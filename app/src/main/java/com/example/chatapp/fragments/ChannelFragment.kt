@@ -1,4 +1,4 @@
-package com.example.chatapp
+package com.example.chatapp.fragments
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.chatapp.R
 import com.example.chatapp.databinding.FragmentChannelBinding
 import io.getstream.chat.android.client.ChatClient
 import io.getstream.chat.android.client.models.Channel
@@ -72,7 +73,7 @@ class ChannelFragment : Fragment() {
 
     private fun setupUser() {
         if (client.getCurrentUser() == null) {
-            user = if (args.chatUser.firstName.contains("Hema")) {
+            user = if (args.chatUser.firstName.contains("hema")) {
                 User(
                     id = args.chatUser.username,
                     extraData = mutableMapOf(
@@ -95,6 +96,7 @@ class ChannelFragment : Fragment() {
                 token = token
             ).enqueue { result ->
                 if (result.isSuccess) {
+                    Toast.makeText(requireContext(), "Success Connecting the User", Toast.LENGTH_SHORT).show()
                     Log.d("ChannelFragment", "Success Connecting the User")
                 } else {
                     Log.d("ChannelFragment", result.error().message.toString())
@@ -172,8 +174,6 @@ class ChannelFragment : Fragment() {
         _binding = null
     }
 }
-
-
 
 
 

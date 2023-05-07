@@ -1,11 +1,15 @@
-package com.example.chatapp
+package com.example.chatapp.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import com.example.chatapp.ChatUser
+import com.example.chatapp.R
+import com.example.chatapp.fragments.LoginFragmentDirections
 import io.getstream.chat.android.client.ChatClient
 import io.getstream.chat.android.client.models.name
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
@@ -17,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         navController = findNavController(R.id.navHostFragment)
 
-        if (navController.currentDestination?.label.toString().contains("login")) {
+        if (navController.currentDestination?.label.toString().contains("Login")) {
             val currentUser = client.getCurrentUser()
             if (currentUser != null) {
                 val user = ChatUser(currentUser.name, currentUser.id)

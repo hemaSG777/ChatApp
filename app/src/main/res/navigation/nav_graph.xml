@@ -6,7 +6,7 @@
     app:startDestination="@id/loginFragment">
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.chatapp.LoginFragment"
+        android:name="com.example.chatapp.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/channelFragment"
-        android:name="com.example.chatapp.ChannelFragment"
+        android:name="com.example.chatapp.fragments.ChannelFragment"
         android:label="fragment_channel"
         tools:layout="@layout/fragment_channel" >
         <action
@@ -38,7 +38,7 @@
     </fragment>
     <fragment
         android:id="@+id/chatFragment"
-        android:name="com.example.chatapp.ChatFragment"
+        android:name="com.example.chatapp.fragments.ChatFragment"
         android:label="fragment_chat"
         tools:layout="@layout/fragment_chat" >
     <argument
@@ -50,7 +50,7 @@
     </fragment>
     <fragment
         android:id="@+id/usersFragment"
-        android:name="com.example.chatapp.UsersFragment"
+        android:name="com.example.chatapp.fragments.UsersFragment"
         android:label="fragment_users"
         tools:layout="@layout/fragment_users" >
         <action
